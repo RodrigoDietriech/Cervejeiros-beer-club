@@ -11,7 +11,7 @@
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <h1><img src="_imagens/logo.png" alt="Cervejeiros beer club"></h1>
+        <h1><img src="_imagens/logo.png" alt="Cervejeiros beer club" id="logo"></h1>
         <form><input type="search" class="busca">
             <input type="image" src="_imagens/lupa.png" alt="lupa de pesquisa" class="lupa">
         </form>
@@ -25,6 +25,17 @@
             </ul>
         </nav>
 	</header>
+    <div class="menu_opcoes menu_categoria" id="menu_lateral">
+        <h1>Categorias</h1>
+        <ol>
+            <li><a href="#">Americanas</a></li>
+            <li><a href="#">Belgas</a></li>
+            <li><a href="#">Alemas</a></li>
+            <li><a href="#">Brasileiras</a></li>
+            <li><a href="#">Pale Ale</a></li>
+            <li><a href="#">Weiss</a></li>
+        </ol>
+    </div>
     <section id="principal">
         <div class="container paineis">
             <secttion class="painel painel_promocao">
@@ -64,6 +75,7 @@
                     </li>
                 </ol>
             </secttion>
+            
             <secttion class="painel painel_vendidos">
                 <h2>Cervejas mais vendidas</h2>
                 <ol>

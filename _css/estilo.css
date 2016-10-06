@@ -6,9 +6,12 @@
 body {
   background-color:  #c8a786;
   background-image: url("../_imagens/fundo.jpg");
-  font-family: 'Fonte_logo';
+  font-family: 'Fonte_logo'; 
+  text-shadow:#fff 1px -1px, #fff -1px 1px, #fff 1px 1px, #fff -1px -1px;
+  font-weight: bold;
 }
-header#cabecalho{               background:url("../_imagens/ceva03.png");
+header#cabecalho{               
+    background:url("../_imagens/ceva03.png");
     position: relative;
 }
 .container {
@@ -52,17 +55,28 @@ header#cabecalho{               background:url("../_imagens/ceva03.png");
 .menu_opcoes a {
     color: #000000;
     font-size: 20pt;
-    font-weight: bold;
     text-decoration: none;
 }
 .menu_opcoes ul li {
   display: inline;
   margin-left: 30px;
 }
+.menu_categoria{
+    position: fixed;
+    width: 200px;
+    height: 300px;
+    top: 160px;
+    left: 10px;
+    text-align: left;
+    font-size: 20pt;
+}
+.menu_categoria li{
+    display: block;
+    padding-top: 20px;
+}
 .painel {
     margin: 10px 0;
     border: 2px solid #000000;
-    text-shadow:#fff 1px -1px, #fff -1px 1px, #fff 1px 1px, #fff -1px -1px;
     border-radius: 10px;
     padding: 10px;
     width: 445px;
@@ -90,20 +104,17 @@ float: right;
     text-align: center;
     font-size: 13pt;
     color:black;
-    font-weight: bold;
     text-decoration: none;
 }
 .rodape{
     position: relative;
 }
 .redes_sociais {
-    text-shadow:#fff 1px -1px, #fff -1px 1px, #fff 1px 1px, #fff -1px -1px;
-    font-weight: bold;
     font-size: 15pt;
     text-align: center;
     position:absolute;
-    bottom: 0;
     right: 0;
+    bottom: 0;
 }
 .redes_sociais li{
     display: inline-block;
