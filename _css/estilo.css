@@ -1,0 +1,96 @@
+@charset "utf-8";
+@font-face{
+	font-family: 'Fonte_logo';
+	src: url("../_fontes/Urban.ttf");
+}
+body {
+  background-color:  #c8a786;
+  background-image: url("../_imagens/fundo.jpg");
+  font-family: 'Fonte_logo';
+}
+header#cabecalho{
+    background: url("../_imagens/ceva03.png");
+    position: relative;
+}
+.container {
+  margin: 0 auto;
+  width: 940px;
+}
+.busca{
+  position: absolute;
+  border: 4px solid #4c4c4c;
+  border-radius: 10px;
+  font-family: 'Fonte_logo';
+  font-size: 20pt;
+  left: 290px;
+  bottom: 55px;
+}
+.lupa{
+  position: absolute;
+  left: 587px;
+  bottom: 50px;
+}
+.carrinho {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../_imagens/carrinho.png) no-repeat top right;
+  background-size: 23%;
+  padding-right: 35px;
+  font-size: 10pt;
+  text-align: right;
+  width: 140px;
+  padding-top: 8px;
+}
+.menu_opcoes {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+}
+.menu_opcoes ul {
+  font-size: 15px;
+}
+.menu_opcoes a {
+    color: #000000;
+    font-size: 20pt;
+    font-weight: bold;
+    text-decoration: none;
+}
+.menu_opcoes ul li {
+  display: inline;
+  margin-left: 30px;
+}
+.painel {
+    margin: 10px 0;
+    border: 2px solid #000000;
+    text-shadow:#fff 1px -1px, #fff -1px 1px, #fff 1px 1px, #fff -1px -1px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 445px;
+}
+.painel_promocao {
+float: left;
+}
+.painel_vendidos {
+float: right;
+}
+
+.painel li{
+    display: inline-block;
+    vertical-align: top;
+    width: 140px;
+    margin: 40px;
+    padding-bottom: 10px;
+}
+.painel h2{
+    text-align: center;
+    font-weight: bold;
+    font-size:30pt;
+}
+.paineis a {
+    text-align: center;
+    font-size: 13pt;
+    color:black;
+    font-weight: bold;
+    text-decoration: none;
+}
