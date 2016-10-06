@@ -8,8 +8,7 @@ body {
   background-image: url("../_imagens/fundo.jpg");
   font-family: 'Fonte_logo';
 }
-header#cabecalho{
-    background: url("../_imagens/ceva03.png");
+header#cabecalho{               background:url("../_imagens/ceva03.png");
     position: relative;
 }
 .container {
@@ -93,4 +92,19 @@ float: right;
     color:black;
     font-weight: bold;
     text-decoration: none;
+}
+.rodape{
+    position: relative;
+}
+.redes_sociais {
+    text-shadow:#fff 1px -1px, #fff -1px 1px, #fff 1px 1px, #fff -1px -1px;
+    font-weight: bold;
+    font-size: 15pt;
+    text-align: center;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+}
+.redes_sociais li{
+    display: inline-block;
 }
