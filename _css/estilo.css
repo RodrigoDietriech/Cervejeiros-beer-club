@@ -11,7 +11,7 @@ body {
   font-weight: bold;
 }
 header#cabecalho{               
-    background:url("../_imagens/ceva03.png");
+    background:url("../_imagens/cabecalho.png");
     position: relative;
 }
 .container {
@@ -24,7 +24,7 @@ header#cabecalho{
   border-radius: 10px;
   font-family: 'Fonte_logo';
   font-size: 20pt;
-  left: 290px;
+  left: 310px;
   bottom: 55px;
 }
 .lupa{
@@ -68,9 +68,8 @@ header#cabecalho{
   margin-left: 30px;
 }
 .menu_categoria{
-    position: fixed;
-    width: 200px;
-    height: 300px;
+    padding: 10px;
+    height: 660px;
     top: 160px;
     left: 10px;
     text-align: left;
@@ -90,11 +89,12 @@ header#cabecalho{
     margin: 10px 0;
     border: 2px solid #000000;
     border-radius: 10px;
+    height: 660px;
     padding: 10px;
     width: 445px;
 }
 .painel_promocao {
-float: left;
+float: left; 
 }
 .painel_vendidos {
 float: right;
@@ -105,15 +105,17 @@ float: right;
     vertical-align: top;
     width: 140px;
     margin: 40px;
-    padding-bottom: 10px;
 }
 .painel h2{
     text-align: center;
     font-weight: bold;
     font-size:30pt;
 }
-.paineis a {
+.painel a {
     text-align: center;
+    text-shadow: #fff 1px -1px, #fff -1px 1px, #fff 1px 1px;
+    font-family: cursive;
+    letter-spacing:1px;
     font-size: 13pt;
     color:black;
     text-decoration: none;
