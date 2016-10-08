@@ -35,6 +35,8 @@ header#cabecalho{
 }
 .carrinho {
   position: absolute;
+  text-decoration: none;
+  color: black;
   top: 0;
   right: 0;
   background: url(../_imagens/carrinho.png) no-repeat top right;
@@ -76,7 +78,7 @@ header#cabecalho{
     padding: 10px;
     float: left;
     width: 190px;
-    height: 660px;
+    height: 400px;
     text-align: left;
     font-size: 20pt;
 }

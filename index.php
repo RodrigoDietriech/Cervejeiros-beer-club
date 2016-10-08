@@ -16,7 +16,9 @@
             <input type="search" name="texto_busca" class="busca">
             <input type="image" src="_imagens/lupa.png" alt="lupa de pesquisa" class="lupa">
         </form>
-        <p class="carrinho">Nenhum item no seu carrinho</p>
+        <a href="#">
+            <p class="carrinho">Nenhum item no seu carrinho</p>
+        </a>
         <nav class="menu_opcoes">
             <ul>
                 <li><a href="#">Home</a></li>
