@@ -25,7 +25,7 @@ header#cabecalho{
   border-radius: 10px;
   font-family: 'Fonte_logo';
   font-size: 20pt;
-  left: 310px;
+  left: 290px;
   bottom: 55px;
 }
 .lupa{
@@ -80,6 +80,11 @@ header#cabecalho{
     text-align: left;
     font-size: 20pt;
 }
+.paineis nav a:hover{
+    color: #fff;
+    text-shadow:#000 1px -1px, #000 -1px 1px, #000 1px 1px, #000 -1px -1px;
+    text-decoration: none;
+}
 .paineis nav ol li{
     display: block;
     padding-top: 20px;
@@ -99,6 +104,50 @@ header#cabecalho{
     height: 660px;
     padding: 10px;
     width: 445px;
+}
+section#produto{
+    display: inline-block;
+    height: 400px;
+    float: left;
+    width: 910px;
+}
+section#produto p{
+    text-align: left;
+    font-family: cursive;
+}
+section#produto p#preco{
+  font-size: 17pt;
+  text-align: left;
+  padding-top: 15px;
+  width: 115px;
+  height: 100px;
+  font-family: cursive;
+}
+section img#add_carrinho{
+    position: relative;
+    top: -115px;
+    left: 100px;
+}
+section img#bt_comprar{
+    position: relative;
+    top: -60px;
+    left: -65px;
+}
+h1#titulo_prod{
+    font-size: 25pt;
+    width: 300px;
+}
+img#cerveja{
+    position: relative;
+    left: -380px;
+}
+.descricao{
+    word-wrap: break-word;
+    position: absolute;
+    left: 400px;
+    top: 208px;
+    width: 700px;
+    height: 200px;
 }
 .painel_promocao {
 float: left; 

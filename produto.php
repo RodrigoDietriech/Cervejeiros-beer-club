@@ -12,14 +12,13 @@
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <h1><img src="_imagens/logo.png" alt="Cervejeiros beer club" id="logo"></h1>
-        <form method="get" action="MySqli.php">
-            <input type="search" name="texto_busca" class="busca">
+        <form><input type="search" class="busca">
             <input type="image" src="_imagens/lupa.png" alt="lupa de pesquisa" class="lupa">
         </form>
-        <p class="carrinho">Nenhum item no seu carrinho</p>
+        <a href="#"><p class="carrinho">Nenhum item no seu carrinho</p></a>
         <nav class="menu_opcoes">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="#">Lista de desejos</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Fale Conosco</a></li>
@@ -46,44 +45,28 @@
                     <li><a href="#">Weiss</a></li>
                 </ol>
             </nav>
-            <section class="painel painel_promocao">
-                <h2>Cervejas em promocao</h2>
-                <ol> 
-                     <?php
-                        require_once('MySqli.php');
-                        $sql = "SELECT * FROM `TB_CERVEJAS` LIMIT 4";
+            <section class="painel" id="produto">
+                <?php require_once('MySqli.php');
+                $id_ceva = $_GET['id_ceva'];
+                        $sql = "SELECT * FROM `TB_CERVEJAS` 
+                        WHERE ID_CERVEJA = $id_ceva";
                         $query = $mysqli->query($sql);
-                    while ($dados = $query->fetch_assoc()) { ?>
-                        <li>
-                            <a href="produto.php?id_ceva=<?php echo $dados['ID_CERVEJA'] ?>">
-                            <figure>
-                                <img src="_imagens/<?php echo $dados['NOME_CERVEJA']; ?>.png">
-                                <figcaption><?php echo $dados['NOME_CERVEJA']; ?> por R$ <?php echo $dados['VALOR_CERVEJA']; ?></figcaption>
-                            </figure>
-                            </a>
-                        </li>
-                    <?php } ?>
-                </ol>
+                        $dados = $query->fetch_assoc() ?>
+                <hgroup>
+                    <h1 id="titulo_prod"><?php echo $dados['NOME_CERVEJA']?></h1>
+                    <h2><img src="_imagens/<?php echo $dados['NOME_CERVEJA']?>.png" alt="Cerveja <?php $dados['NOME_CERVEJA']?>" id="cerveja"</h2>
+                </hgroup>    
+                    <div class="descricao">
+                        <p>AQ FICA A DECRIÇÃO OLA</p>
+                    </div>
+                    <p id="preco">R$ <?php echo $dados['VALOR_CERVEJA'] ?></p>
+                    <a href="#">
+                        <img src="_imagens/adicionar_carrinho.png" alt="Adicionar ao carrinho" id="add_carrinho">
+                    </a>
+                    <a href="#">
+                        <img src="_imagens/botao_comprar.png" alt="Botão comprar" id="bt_comprar">
+                    </a>
             </section>
-            
-            <secttion class="painel painel_vendidos">
-                <h2>Cervejas mais vendidas</h2>
-                <ol>
-                    <?php
-                        $sql = "SELECT * FROM `TB_CERVEJAS` WHERE ID_CERVEJA > 4 LIMIT 4 ";
-                        $query = $mysqli->query($sql);
-                    while ($dados = $query->fetch_assoc()) { ?>
-                    <li>
-                        <a href="produto.php?id_ceva=<?php echo $dados['ID_CERVEJA'] ?>">
-                        <figure>
-                            <img src="_imagens/<?php echo $dados['NOME_CERVEJA']; ?>.png">
-                            <figcaption><?php echo $dados['NOME_CERVEJA']; ?> por R$ <?php echo $dados['VALOR_CERVEJA']; ?></figcaption>
-                        </figure>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </secttion>
         </div>
     </section>
     <footer class="container rodape">
