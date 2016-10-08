@@ -13,6 +13,7 @@ body {
 header#cabecalho{               
     background:url("../_imagens/cabecalho.png");
     position: relative;
+    left: 0px;
 }
 .container {
   margin: 0 auto;
@@ -67,28 +68,34 @@ header#cabecalho{
   display: inline;
   margin-left: 30px;
 }
-.menu_categoria{
+.paineis {
+    width: 1140px;
+    height: 700px;
+}
+.paineis nav{
     padding: 10px;
+    float: left;
+    width: 190px;
     height: 660px;
-    top: 160px;
-    left: 10px;
     text-align: left;
     font-size: 20pt;
 }
-.menu_categoria li{
+.paineis nav ol li{
     display: block;
     padding-top: 20px;
 }
-.menu_categoria li ul{
+.paineis nav ol li ul{
     display: none;
 }
-.menu_categoria li:hover ul{
+.paineis li:hover ul{
     display: block;
+}
+.paineis a{
+    text-decoration: none;
+    color: black;
 }
 .painel {
     margin: 10px 0;
-    border: 2px solid #000000;
-    border-radius: 10px;
     height: 660px;
     padding: 10px;
     width: 445px;
@@ -113,11 +120,10 @@ float: right;
 }
 .painel a {
     text-align: center;
-    text-shadow: #fff 1px -1px, #fff -1px 1px, #fff 1px 1px;
+    text-shadow:#fff 1px -1px, #fff -1px 1px, #fff 1px 1px;
     font-family: cursive;
     letter-spacing:1px;
     font-size: 13pt;
-    color:black;
     text-decoration: none;
 }
 .rodape{

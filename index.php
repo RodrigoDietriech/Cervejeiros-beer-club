@@ -27,46 +27,44 @@
         </nav>
 	</header>
     <section id="principal">
-        <div class="menu_opcoes menu_categoria" id="menu_lateral">
-        <h1>Categorias</h1>
-        <nav>
-            <ol>
-                <li>
-                    <a href="#">Americanas</a>
-                    <ul>
-                        <li><a href="#">Teste1</a></li>
-                        <li><a href="#">Teste2</a></li>
-                        <li><a href="#">Teste3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Belgas</a></li>
-                <li><a href="#">Alemas</a></li>
-                <li><a href="#">Brasileiras</a></li>
-                <li><a href="#">Pale Ale</a></li>
-                <li><a href="#">Weiss</a></li>
-            </ol>
-        </nav>
-    </div>
-        <div class="container paineis">
-            <secttion class="painel painel_promocao">
-                <h2>Cervejas em promocao</h2>
+        <div class="paineis">
+            <nav>
+                <h1>Categorias</h1>
                 <ol>
-                    <?php
+                    <li>
+                        <a href="#">Americanas</a>
+                        <ul>
+                            <li><a href="#">Teste1</a></li>
+                            <li><a href="#">Teste2</a></li>
+                            <li><a href="#">Teste3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Belgas</a></li>
+                    <li><a href="#">Alemas</a></li>
+                    <li><a href="#">Brasileiras</a></li>
+                    <li><a href="#">Pale Ale</a></li>
+                    <li><a href="#">Weiss</a></li>
+                </ol>
+            </nav>
+            <section class="painel painel_promocao">
+                <h2>Cervejas em promocao</h2>
+                <ol> 
+                     <?php
                         require_once('MySqli.php');
                         $sql = "SELECT * FROM `TB_CERVEJAS` LIMIT 4";
                         $query = $mysqli->query($sql);
                     while ($dados = $query->fetch_assoc()) { ?>
-                    <li>
-                        <a href="produto.html">
-                        <figure>
-                            <img src="_imagens/<?php echo $dados['NOME_CERVEJA']; ?>.png">
-                            <figcaption><?php echo $dados['NOME_CERVEJA']; ?> por R$ <?php echo $dados['VALOR_CERVEJA']; ?></figcaption>
-                        </figure>
-                        </a>
-                    </li>
+                        <li>
+                            <a href="produto.php?id_ceva=<?php echo $dados['ID_CERVEJA'] ?>">
+                            <figure>
+                                <img src="_imagens/<?php echo $dados['NOME_CERVEJA']; ?>.png">
+                                <figcaption><?php echo $dados['NOME_CERVEJA']; ?> por R$ <?php echo $dados['VALOR_CERVEJA']; ?></figcaption>
+                            </figure>
+                            </a>
+                        </li>
                     <?php } ?>
                 </ol>
-            </secttion>
+            </section>
             
             <secttion class="painel painel_vendidos">
                 <h2>Cervejas mais vendidas</h2>
